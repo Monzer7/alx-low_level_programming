@@ -1,7 +1,9 @@
 #include <stdio.h>
 /**
  * main - enrty point
- * Return - always 0 (suceess)
+ *
+ * Discreption: function that prints var size
+ * Return: Always 0 (suceess)
  */
 int main(void)
 {
@@ -10,5 +12,6 @@ int main(void)
 	printf("Size of a long int : %lu byte(s)\n", sizeof(long int));
 	printf("Size of a long long : %lu byte(s)\n", sizeof(long long));
 	printf("Size of a float : %lu byte(s)", sizeof(float));
+
 	return (0);
 }
