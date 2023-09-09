@@ -2,7 +2,8 @@
 /**
  * main - Entry point
  *
- * Return :Always 0 (success)*
+ * Description: it prints the string between braccets
+ * Return: Always 0 (success)
  */
 int main(void)
 {
