@@ -2,13 +2,13 @@
 /**
  * main - Entry point
  *
- * Return : Always 0
+ * Return : Always 0 (success)
  *
  */
 int main(void)
 {
 /**
- * this function prints
+ * puts - return string
  *
  * Programming is like building a multilingual puzzle
  *
