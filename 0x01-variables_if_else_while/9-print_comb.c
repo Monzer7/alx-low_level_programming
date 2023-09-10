@@ -10,9 +10,9 @@ int main(void)
 	int m;
 for (m = 0 ; m < 9 ; m++)
 {putchar(48 + m);
-putchar(", ");
-putchar(57);
+putchar(',');
+putchar(' ');
 }
-putchar('\n');
+putchar(57);
 	return (0);
 }
