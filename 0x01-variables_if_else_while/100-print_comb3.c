@@ -12,7 +12,7 @@ int n;
 for (m = 0 ; m <= 9 ; m++)
 putchar(m + 48);
 for (n = 0 ; m <= 0 ; n++)
-if (n != m)
+if (n = m)
 {
 putchar(n + 48);
 putchar(',');
