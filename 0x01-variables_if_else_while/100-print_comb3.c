@@ -12,7 +12,7 @@ int n;
 for (m = 0 ; m <= 9 ; m++)
 for (n = m + 1 ; n <= 9 ; n++)
 putchar(m + 48);
-putchat(n + 48);
+putchar(n + 48);
 if (m == 8 && n == 9)
 {
 putchar(',');
