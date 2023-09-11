@@ -10,13 +10,14 @@ int main(void)
 int m;
 int n;
 for (m = 0 ; m <= 9 ; m++)
+for (n = m + 1 ; n <= 9 ; n++)
 putchar(m + 48);
-for (n = 0 ; n <= 9 ; n++)
-if (n == m)
-putchar(n + 48);
+putchat(n + 48);
+if (m == 8 && n == 9)
+{
 putchar(',');
 putchar(' ');
-
+}
 putchar('\n');
 return (0);
 }
