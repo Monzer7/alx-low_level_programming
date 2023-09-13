@@ -13,7 +13,9 @@ char  m;
 int i;
 for (i = '0' ; i <= '9' ; i++)
 for (m = 97 ; m <= 122 ; m++)
+{
 _putchar(m);
+}
 _putchar('\n');
 return;
 }
