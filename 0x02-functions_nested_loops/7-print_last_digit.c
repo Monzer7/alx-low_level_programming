@@ -7,9 +7,9 @@
 int print_last_digit(int n)
 {
 int m;
-if (m > 0)
+if (n > 0)
 m = n % 10;
-else if (m < 0)
+else if (n < 0)
 m = -n % 10;
 _putchar(m + 48);
 return (m);
