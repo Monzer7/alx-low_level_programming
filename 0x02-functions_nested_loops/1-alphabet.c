@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * print alphabet - main function
+ * print_alphabet - main function
  *
- * Description: print alphabet in lower case 
+ * Description: Prints all alphabet in lower case
  * Return: always (0)
  */
+
 void print_alphabet(void)
 {
 char  m;
