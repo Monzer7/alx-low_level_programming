@@ -19,6 +19,7 @@ s--;
 for (k = m; k > 0; k--)
 {
 _putchar(*s);
+s--;
 }
 _putchar('\n');
 return;
