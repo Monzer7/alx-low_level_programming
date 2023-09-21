@@ -38,6 +38,6 @@ j++;
 }
 m = src[n - 1];
 dest[len + i] = m;
-dest[len + i + 1] = '\0';
+dest[len + (i + 1)] = '\0';
 return (dest);
 }
