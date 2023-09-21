@@ -15,17 +15,18 @@ s++;
 return (len);
 }
 /**
- * _strcat - concatenate two strings
+ * _strncat - concatenate n bytes to destination string
  * @dest: string to be appended to
  * @src: string to append
+ * @n: append n number of bytes(chars)
  * Return: concatenated string
  */
-
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 int i = 0;
 int j = 0;
 int len = 0;
+char m;
 _strlen(dest);
 
 while (dest[i] != '\0')
@@ -35,7 +36,10 @@ while (src[j] != '\0')
 dest[len + i] = src[j];
 i++;
 j++;
+
 }
-dest[len + i] = '\0';
+m = src[n - 1];
+dest[len + i] = m;
+dest[len + i + 1] = '\0';
 return (dest);
 }
