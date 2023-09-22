@@ -7,12 +7,10 @@
 
 char *cap_string(char *s)
 {
-/**
- * if (s[i] >= 'a' && s[i] <= 'z')
- *		s[i] = s[i] - 'a' + 'A';
- *	i++;
- */
 int i = 0;
+if (s[i] >= 'a' && s[i] <= 'z')
+s[i] = s[i] - 'a' + 'A';
+i++;
 while (s[i] != '\0')
 {
 if ((s[i] >= 'a' && s[i] <= 'z')
