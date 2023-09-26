@@ -18,7 +18,7 @@ while (haystack[i] != '\0')
 if (haystack[i] == needle[0])
 {
 k = i;
-while(needle[m] != '\0')
+while (needle[m] != '\0')
 {
 
 if (haystack[k] == needle[m])
@@ -26,13 +26,13 @@ if (haystack[k] == needle[m])
 k++;
 m++;
 }
-else 
+else
 break;
 
 }
 if (needle[m] == '\0')
 {
-return(haystack + i);
+return (haystack + i);
 }
 }
 i++;
