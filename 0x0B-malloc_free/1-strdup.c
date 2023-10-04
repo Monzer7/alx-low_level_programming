@@ -29,7 +29,7 @@ if (str == NULL)
 return (NULL);
 m = malloc(sizeof(char) * lenght(str));
 k = 0;
-while (str[k] != '\0')
+while (k <= lenght(str))
 {
 m[k] = str[k];
 k++;
