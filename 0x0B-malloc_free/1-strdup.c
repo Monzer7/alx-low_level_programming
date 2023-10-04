@@ -28,10 +28,12 @@ int k;
 if (str == NULL)
 return (NULL);
 m = malloc(sizeof(char) * lenght(str));
+if (m == NULL)
+return (NULL);
 k = 0;
 while (k <= lenght(str))
 {
-m[k] = str[k];
+*(m + k) = *(str + k);
 k++;
 if (m == NULL)
 return (NULL);
