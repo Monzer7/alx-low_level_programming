@@ -11,7 +11,7 @@ int lenght(char *str)
 int i, l;
 for (i = 0; str[i] != '\0'; i++)
 l = i;
-return (l + 1);
+return (l);
 }
 
 
@@ -29,7 +29,6 @@ if (str == NULL)
 return (NULL);
 m = malloc(sizeof(char) * lenght(str));
 k = 0;
-return (NULL);
 while (str[k] != '\0')
 {
 m[k] = str[k];
