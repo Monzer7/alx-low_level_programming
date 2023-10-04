@@ -14,6 +14,8 @@ char *m;
 m = malloc(sizeof(char) * size);
 if (size == 0)
 return (NULL);
+if (m == NULL)
+return (NULL);
 while (i < size)
 {
 *(m + i) = c;
