@@ -29,12 +29,13 @@ if (str == NULL)
 return (NULL);
 m = malloc(sizeof(char) * lenght(str));
 k = 0;
-if (lenght(str) == 0)
 return (NULL);
 while (str[k] != '\0')
 {
 m[k] = str[k];
 k++;
+if (m == NULL)
+return (NULL);
 }
 return (m);
 }
