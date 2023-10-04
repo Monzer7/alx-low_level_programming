@@ -35,8 +35,6 @@ while (k < lenght(str))
 {
 *(m + k) = *(str + k);
 k++;
-if (m == NULL)
-return (NULL);
 }
 return (m);
 }
