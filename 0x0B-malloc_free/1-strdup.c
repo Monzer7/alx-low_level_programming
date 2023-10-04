@@ -11,7 +11,7 @@ int lenght(char *str)
 int i, l;
 for (i = 0; str[i] != '\0'; i++)
 l = i;
-return (l);
+return (l + 1);
 }
 
 
