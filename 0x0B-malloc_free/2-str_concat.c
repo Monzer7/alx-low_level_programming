@@ -2,18 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * lenght - measures string lenght
- * @s: string to measured
- * Return: the lenght of the string
- */
-int lenght(char *s)
-{
-int i, j;
-for (i = 0; s[i] != '\0'; i++)
-j = i;
-return (j + 1);
-}
-/**
  * *str_concat - concatenate two strings
  * @s1: string to be added to
  * @s2: string to concatenate ti s1
@@ -21,16 +9,23 @@ return (j + 1);
  */
 char *str_concat(char *s1, char *s2)
 {
-int k;
+int k, i, lenght1 = 0, lenght2 = 0;
 char *mem;
-for (k = 0; s2[k] != '\0'; k++)
+while (*(s1 + k))
 {
-s1[k + lenght(s1)] = s2[k];
+lenght1++;
+k++;
 }
-if (s1 == NULL || s2 == NULL)
+while (*(s2 + i))
 {
-return (NULL);
+lenght2++;
+i++;
 }
-mem = malloc(sizeof(char) * lenght(s1));
+lenght2++;
+mem = malloc(sizeof(char) * (lenght1 + lenght2));
+while (i < lenght1)
+{
+*(mem + i) = *(s1 + i);
+}
 return (mem);
 }
