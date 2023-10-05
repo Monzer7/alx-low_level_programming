@@ -9,23 +9,27 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-int k, i, lenght1 = 0, lenght2 = 0;
-char *mem;
-while (*(s1 + k))
+char *m;
+int len1 = 0, len2 = 0, i = 0, j = 0, k = 0;
+
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";	
+while (*(s1 + i))
 {
-lenght1++;
-k++;
+i++, len1++;
 }
-while (*(s2 + i))
+while (*(s2 + j))
 {
-lenght2++;
-i++;
+j++; len2++;
 }
-lenght2++;
-mem = malloc(sizeof(char) * (lenght1 + lenght2));
-while (i < lenght1)
+m = malloc(sizeof(char) * (len1 + len2));
+if (m == NULL)
+return (NULL);
+while (k < len1)
 {
-*(mem + i) = *(s1 + i);
+*(m + k) = *(s1 + k);
 }
-return (mem);
+return (m);
 }
