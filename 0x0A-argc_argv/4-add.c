@@ -13,6 +13,7 @@ int j, res = 0;
 if (argc == 1)
 {
 printf("0\n");
+return (0);
 }
 for (j = 1; j < argc; j++)
 {
@@ -23,7 +24,7 @@ else
 printf("Error\n");
 return (1);
 }
-printf("%d\n", res);
 }
+printf("%d\n", res);
 return (0);
 }
