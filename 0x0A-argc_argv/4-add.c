@@ -13,7 +13,7 @@ int j, res = 0;
 if (argc == 1)
 {
 printf("0\n");
-return (0);
+/*return (0);*/
 }
 for (j = 1; j < argc; j++)
 {
