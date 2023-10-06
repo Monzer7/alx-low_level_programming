@@ -17,7 +17,7 @@ return (0);
 }
 for (j = 1; j < argc; j++)
 {
-if (!(*argv[j] < '0' || *argv[j] > '9'))
+if (*argv[j] >= '0' && *argv[j] <= '9')
 res = res + atoi(argv[j]);
 else
 {
