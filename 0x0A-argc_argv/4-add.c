@@ -19,9 +19,11 @@ for (i = 1; i < argc; i++)
 {
 res = res + atoi(argv[i]);
 
-/**if (*argv[i] < 48 || *argv[i] > 57)
-printf("ERROR\n");
-return (1);*/
+/**
+ * if (*argv[i] < 48 || *argv[i] > 57)
+ *printf("ERROR\n");
+ *return (1);
+ */
 }
 printf("%d\n", res);
 return (0);
