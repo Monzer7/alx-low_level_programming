@@ -23,7 +23,7 @@ else
 printf("Error\n");
 return (1);
 }
-}
 printf("%d\n", res);
+}
 return (0);
 }
