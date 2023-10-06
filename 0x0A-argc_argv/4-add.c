@@ -8,22 +8,21 @@
  */
 int main(int argc, char **argv)
 {
-int i, res;
+int i, res = 0;
 if (argc == 1)
 {
 printf("0\n");
+return (0);
 }
+else if (argc > 1)
 for (i = 1; i < argc; i++)
-{
-if (*argv[i] < 48 || *argv[i] > 57)
-printf("ERROR\n");
-return (1);
-if (argc > 1)
 {
 res = res + atoi(argv[i]);
 
+/**if (*argv[i] < 48 || *argv[i] > 57)
+printf("ERROR\n");
+return (1);*/
+}
 printf("%d\n", res);
-}
-}
 return (0);
 }
