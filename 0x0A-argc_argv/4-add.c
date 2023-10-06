@@ -21,7 +21,7 @@ if (!(*argv[j] < 48 || *argv[j] > 57))
 res = res + atoi(argv[j]);
 else
 {
-printf("ERROR\n");
+printf("Error\n");
 return (1);
 }
 }
