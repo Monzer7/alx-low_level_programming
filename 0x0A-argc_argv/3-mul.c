@@ -8,14 +8,16 @@
  */
 int main(int argc, char **argv)
 {
-int x;
+int res;
+int i = atoi(argv[1]);
+int j = atoi(argv[2]);
 if (argc < 2)
 {
 printf("ERROR");
 return (1);
 }
-x = *argv[1] * (*argv[2]);
-printf("%d\n", x);
+res = i * j;
+printf("%d\n", res);
 return (0);
 }
 
