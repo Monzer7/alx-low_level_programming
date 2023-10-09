@@ -44,7 +44,7 @@ if (s2 == NULL)
 {
 s2 = "";
 }
-lenght = len(s1) + len(s2) + 1;
+lenght = len(s1) + len(s2);
 
 ptr = malloc(sizeof(*ptr) * lenght);
 if (ptr == NULL)
