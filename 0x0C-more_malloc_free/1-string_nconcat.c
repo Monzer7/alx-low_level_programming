@@ -51,7 +51,7 @@ if (ptr == NULL)
 {
 return (NULL);
 }
-for (i = 0; i <= len(s1); i++)
+for (i = 0; s1[i] != '\0'; i++)
 ptr[i] = s1[i];
 for (j = 0; j <= k; j++)
 {
