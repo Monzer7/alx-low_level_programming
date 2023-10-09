@@ -7,7 +7,7 @@
  * @s:string to be measured
  * Return: string lenght
  */
-/*int len(char *s)
+int len(char *s)
 {
 int m, l;
 for (m = 0; s[m] != '\0'; m++)
@@ -15,7 +15,7 @@ for (m = 0; s[m] != '\0'; m++)
 l = m;
 }
 return (l);
-}*/
+}
 /**
  *  *string_nconcat - function concatenate two strings
  *  @s1: string to added to
@@ -60,27 +60,11 @@ ptr[i + j + 1] = '\0';
 }
 return (ptr);
 }*/
-int _strlen(char *string)
-{
-	int i;
-
-	for (i = 0; string[i] != '\0'; i++)
-		;
-	return (i);
-}
-
-/**
- * string_nconcat - concatenate s1 and n bytes of s2; return ptr to string
- * @s1: string 1
- * @s2: string 2
- * @n: n bytes to concat from string 2
- * Return: pointer to concatenated string
- */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int num, len, i, j;
+	int num, lenght, i, j;
 
 	num = n;
 
@@ -90,12 +74,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (num < 0) /* account for negative n bytes */
 		return (NULL);
-	if (num >= _strlen(s2)) /* account for n too big */
-		num = _strlen(s2);
+	if (num >= len(s2)) /* account for n too big */
+		num = len(s2);
 
-	len = _strlen(s1) + num + 1; /* +1 to account for null pointer */
+	lenght = len(s1) + num + 1; /* +1 to account for null pointer */
 
-	ptr = malloc(sizeof(*ptr) * len); /* malloc and check for error */
+	ptr = malloc(sizeof(*ptr) * lenght); /* malloc and check for error */
 	if (ptr == NULL)
 		return (NULL);
 
