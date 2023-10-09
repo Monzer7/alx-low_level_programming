@@ -4,7 +4,8 @@
 #include <stdlib.h>
 /**
  * len - calculate str lenght
- * Return: string lenght 
+ * @s:string to be measured
+ * Return: string lenght
  */
 int len(char *s)
 {
@@ -17,6 +18,8 @@ return (l);
 }
 /**
  *  *string_nconcat - function concatenate two strings
+ *  @s1: string to added to
+ *  @s2: string to be added
  *  @n: number of bytes to be concatenate
  *  Return: pointer to allocated memory
  */
