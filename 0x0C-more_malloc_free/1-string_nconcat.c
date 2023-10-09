@@ -40,7 +40,7 @@ return (NULL);
 if (k >= _strlen(s2))
 k = _strlen(s2);
 
-lenght = _strlen(s1) + k;
+lenght = _strlen(s1) + k + 1;
 
 ptr = malloc(sizeof(*ptr) * lenght);
 
@@ -51,11 +51,9 @@ for (i = 0; s1[i] != '\0'; i++)
 ptr[i] = s1[i];
 
 for (j = 0; j <= k; j++)
-{
 ptr[i + j] = s2[j];
 
-}
-ptr[i + j + 1] = '\0';
+ptr[i + j] = '\0';
 return (ptr);
 }
 
