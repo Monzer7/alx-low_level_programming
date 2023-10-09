@@ -54,6 +54,9 @@ return (NULL);
 for (i = 0; i <= len(s1); i++)
 ptr[i] = s1[i];
 for (j = 0; j <= k; j++)
+{
 ptr[len(s1) + j] = s2[j];
+ptr[len(s1) + j + 1] = '\0';
+}
 return (ptr);
 }
