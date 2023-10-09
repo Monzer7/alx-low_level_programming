@@ -35,7 +35,7 @@ p = malloc(new_size);
 if (p == NULL)
 return (NULL);
 
-for (i = 0; i < new_size; i++)
+for (i = 0; i < old_size && i < new_size; i++)
 *((char *)p + i) = *((char *)ptr + i);
 free(ptr);
 
