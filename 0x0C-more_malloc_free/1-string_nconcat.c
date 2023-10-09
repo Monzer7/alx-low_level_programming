@@ -50,7 +50,7 @@ return (NULL);
 for (i = 0; s1[i] != '\0'; i++)
 ptr[i] = s1[i];
 
-for (j = 0; j <= k; j++)
+for (j = 0; j < k; j++)
 ptr[i + j] = s2[j];
 
 ptr[i + j] = '\0';
