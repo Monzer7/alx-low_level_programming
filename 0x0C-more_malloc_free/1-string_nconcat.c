@@ -14,7 +14,7 @@ for (m = 0; s[m] != '\0'; m++)
 {
 l = m;
 }
-return (l+1);
+return (l + 1);
 }
 /**
  *  *string_nconcat - function concatenate two strings
