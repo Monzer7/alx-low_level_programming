@@ -18,10 +18,10 @@ va_start(monzer, n);
 for (i = 0; i < n; i++)
 {
 s = va_arg(monzer, char *);
-if (s != NULL)
-printf("%s", s);
-else
+if (s == NULL)
 printf("(nil)");
+else
+printf("%s", s);
 
 if (separator != NULL && i != n)
 printf("%s", separator);
