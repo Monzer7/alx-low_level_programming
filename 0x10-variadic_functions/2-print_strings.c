@@ -11,17 +11,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list monzer;
 unsigned int i;
-if (n != 0)
+char *s;
+if (n > 0)
 {
-va_start(monzer, int);
+va_start(monzer, n);
 for (i = 0; i < n; i++)
 {
-if (*va_arg(monzer, int) != NULL)
-printf("%s", va_arg(monzer, int));
+s = va_arg(monzer, char *);
+if (s != NULL)
+printf("%s", s);
 else
 printf("(nil)");
 
-if (separator != NULL)
+if (separator != NULL && i != n)
 printf("%s", separator);
 }
 va_end(monzer);
