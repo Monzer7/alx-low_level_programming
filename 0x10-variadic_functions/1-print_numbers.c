@@ -18,7 +18,7 @@ va_start(monzer, n);
 for (i = 1; i <= n; i++)
 {
 printf("%d", va_arg(monzer, int));
-if (i !=n && separator != NULL)
+if (i != n && separator != NULL)
 printf("%s", separator);
 }
 va_end(monzer);
