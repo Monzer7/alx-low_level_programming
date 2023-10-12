@@ -15,7 +15,7 @@ char *s;
 if (n > 0)
 {
 va_start(monzer, n);
-for (i = 0; i <= n; i++)
+for (i = 1; i <= n; i++)
 {
 s = va_arg(monzer, char *);
 if (s == NULL)
