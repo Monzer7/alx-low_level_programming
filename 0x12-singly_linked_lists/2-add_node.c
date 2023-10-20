@@ -31,7 +31,10 @@ else
 list_t *p = NULL;
 p = malloc(sizeof(list_t));
 if (p == NULL)
+{
+free(p);
 return (NULL);
+}
 p->str = strdup(str);
 p->len = _str(str);
 p->next = *head;
