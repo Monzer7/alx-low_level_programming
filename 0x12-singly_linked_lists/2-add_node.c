@@ -44,5 +44,5 @@ p->next = *head;
 *head = p;
 }
 
-return (*head);
+return (*p);
 }
