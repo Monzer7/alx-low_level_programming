@@ -1,1 +1,1 @@
-this the learning C repo
+more pointers
