@@ -32,6 +32,7 @@ list_t *p = NULL;
 p = malloc(sizeof(list_t));
 if (p == NULL)
 {
+free(p->next);
 free(p);
 return (NULL);
 }
