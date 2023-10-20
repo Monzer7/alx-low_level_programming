@@ -14,7 +14,7 @@ while (h != NULL)
 		printf("[0] (nil)\n");
 	else
 	{
-	printf(" [%d] %s\n", h->len, h->str);
+	printf("[%d] %s\n", h->len, h->str);
 	}
 	counts++;
 	h = h->next;
