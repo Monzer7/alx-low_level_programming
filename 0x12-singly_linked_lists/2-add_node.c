@@ -26,6 +26,8 @@ if (*head == NULL)
 return (NULL);
 if (str == NULL)
 return (NULL);
+if (strdup(str) == NULL)
+	return (NULL);
 else
 {
 list_t *p = NULL;
