@@ -29,11 +29,10 @@ return (NULL);
 if (str == NULL)
 return (NULL);
 if (strdup(str) == NULL)
-{	
-	free(strdup(str));
-	return (NULL);
+{
+free(strdup(str));
+return (NULL);
 }
-
 
 if (new == NULL)
 {
@@ -41,7 +40,7 @@ free(new->next);
 free(new);
 return (NULL);
 }
-else 
+else
 {
 new->str = strdup(str);
 new->len = _str(str);
