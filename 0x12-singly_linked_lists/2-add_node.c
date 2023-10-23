@@ -45,7 +45,7 @@ new->next = *head;
 *head = new;
 
 if (*head == NULL)
-	new->next= NULL;
+	new->next = NULL;
 
 return (new);
 }
