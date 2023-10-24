@@ -25,18 +25,21 @@ if (idx == 0)
 	*head = new;
 	return (new);
 }
+
 temp = *head;
+
 while (i < (idx - 1))
 {
-temp = temp->next;
-i++;
+	temp = temp->next;
+	i++;
 
-if (temp == NULL)
-{
+	if (temp == NULL)
+	{
 	free(new);
 	return (NULL);
+	}
 }
-}
+
 new->next = temp->next;
 temp->next = new;
 return (new);
