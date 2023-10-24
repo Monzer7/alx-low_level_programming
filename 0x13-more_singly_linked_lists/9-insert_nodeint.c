@@ -25,7 +25,7 @@ if (idx == 0)
 	*head = new;
 }
 temp = *head;
-while (i < idx)
+while (i < (idx - 1))
 {
 temp = temp->next;
 i++;
