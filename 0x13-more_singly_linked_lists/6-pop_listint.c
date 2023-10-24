@@ -16,5 +16,6 @@ else
 value = new->n;
 *head = new->next;
 }
+free(new);
 return (value);
 }
