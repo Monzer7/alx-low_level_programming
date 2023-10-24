@@ -29,11 +29,6 @@ while (i < (idx - 1))
 {
 temp = temp->next;
 i++;
-	if (temp == NULL)
-{
-	free(new);
-	return (NULL);
-}
 }
 new->next = temp->next;
 temp->next = new;
