@@ -23,12 +23,19 @@ if (idx == 0)
 {
 	new->next = *head;
 	*head = new;
+	return (new);
 }
 temp = *head;
 while (i < (idx - 1))
 {
 temp = temp->next;
 i++;
+
+if (temp == NULL)
+{
+	free(new);
+	return (NULL);
+}
 }
 new->next = temp->next;
 temp->next = new;
