@@ -13,7 +13,7 @@ while (*head != NULL)
 {
 p = *head;
 free(p);
-*head = *head->next;
+*head = p->next;
 }
-*head == NULL;
+*head = NULL;
 }
