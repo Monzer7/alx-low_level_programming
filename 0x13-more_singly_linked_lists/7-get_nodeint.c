@@ -13,7 +13,7 @@ if (head == NULL)
 	return (NULL);
 
 new = head;
-for (i = 0; i < index; i++)
+for (i = 0; i < index && head != NULL; i++)
 {
 new = new->next;
 }
