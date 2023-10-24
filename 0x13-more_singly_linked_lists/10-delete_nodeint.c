@@ -26,7 +26,7 @@ new = new->next;
 	i++;
 }
 
-if (i != (index - 1) || tmp->next == NULL)
+if (i != (index - 1) || new->next == NULL)
 	return (-1);
 temp = new->next;
 new->next = (new->next)->next;
