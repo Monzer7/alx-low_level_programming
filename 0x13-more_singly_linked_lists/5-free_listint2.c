@@ -15,5 +15,4 @@ p = *head;
 free(p);
 *head = p->next;
 }
-*head = NULL;
 }
