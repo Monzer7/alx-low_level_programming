@@ -12,7 +12,7 @@ listint_t *new;
 if (head == NULL)
 	return (NULL);
 
-for (i = 0; i < index; i++)
+for (i = 0; i <= index; i++)
 {
 new = head;
 new = new->next;
