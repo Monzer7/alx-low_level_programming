@@ -13,9 +13,12 @@ if (head == NULL)
 	return (NULL);
 
 new = head;
-for (i = 0; i < index && head != NULL; i++)
+for (i = 0; i < index ; i++)
 {
 new = new->next;
 }
+if (i == index)
 return (new);
+else
+return (NULL);
 }
