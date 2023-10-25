@@ -20,7 +20,7 @@ new = *head;
 	free(new);
 	return (1);
 }
-while (i < (index - 1))
+while (i < (index - 1) && new != NULL)
 {
 new = new->next;
 	i++;
