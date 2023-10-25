@@ -15,10 +15,9 @@ new = head;
 
 while (new->next != NULL)
 {
-	printf("[%p] %d\n",(void *)new, new->n);
-		new = new->next;
-	count++;
-
+printf("[%p] %d\n", (void *)new, new->n);
+count++;
+new = new->next;
 }
 return (count);
 }
