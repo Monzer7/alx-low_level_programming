@@ -13,11 +13,13 @@ if (head == NULL)
 
 new = head;
 
-while (new->next != NULL)
+while (new != NULL)
 {
 printf("[%p] %d\n", (void *)new, new->n);
 count++;
 new = new->next;
+if (new->next == head)
+	break;
 }
 return (count);
 }
