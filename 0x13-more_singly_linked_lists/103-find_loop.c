@@ -13,13 +13,15 @@ while (h != NULL && t != NULL)
 	h = h->next;
 	t = t->next->next;
 	if (h == t)
-		h = head;
+	{
+	h = head;
 	while (h != t)
 	{
 		h = h->next;
 		t = t->next;
 	}
 return (h);
+	}
 }
 return (NULL);
 }
