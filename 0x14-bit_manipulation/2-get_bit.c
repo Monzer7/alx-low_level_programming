@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 int bit;
 unsigned int maxlen;
-naxlen = (sizeof(unsigned long int) * 8);
+maxlen = (sizeof(unsigned long int) * 8);
 if (index > maxlen)
 	return (-1);
 bit = ((n >> index) & 1);
