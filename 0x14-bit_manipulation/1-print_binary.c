@@ -8,6 +8,8 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int m = n;
 	int len = 0;
+	if (m == 0)
+		_putchar('0');
 /*binary number lenght*/
 	while (m > 0)
 	{
