@@ -12,8 +12,6 @@ int app;
 int lenght;
 if (filename == NULL)
 	return (-1);
-/*if (text_content == NULL)
-	return (-1);*/
 
 /*opening file with amende*/
 p = open(filename, O_WRONLY | O_APPEND);
