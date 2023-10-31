@@ -14,7 +14,7 @@ if (filename == NULL)
 	return (-1);
 /*creating file*/
 
-p = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0666);
+p = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 if (p == -1)
 	return (-1);
 if (text_content == NULL)
