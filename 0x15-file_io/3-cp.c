@@ -1,67 +1,68 @@
 #include "main.h"
-void detect_error(int file_from, int file_to, char *argv[]);
 /**
- * main - entry point
- * @argc: number of arg
- * @argv: arguments array.
- * Return: Always 0.
- */
-
-int main(int argc, char *argv[])
+ * __exit - prints error messages and exits with exit value
+ * @error: num is either exit value or file descriptor
+ * @s: str is a name, either of the two filenames
+ * @f: file descriptor
+ * Return: 0 on success
+ **/
+int __exit(int err, char *s, int f)
 {
-	int file_from, file_to, err_close;
-	ssize_t nchars, nwrite;
-	char buf[1024];
-
-	if (argc != 3)
+	switch (err)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
-		exit(97);
+	case 97:
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(err);
+	case 98:
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
+		exit(err);
+	case 99:
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
+		exit(err);
+	case 100:
+		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", f);
+		exit(err);
+	default:
+		return (0);
 	}
-
-	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	detect_error(file_from, file_to, argv);
-
-	nchars = sizeof(char) * 1024;
-
-	while (nchars == 1024)
-	{
-		nchars = read(file_from, buf, 1024);
-		if (nchars == -1)
-			detect_error(-1, 0, argv);
-		nwrite = write(file_to, buf, nchars);
-		if (nwrite == -1)
-			detect_error(0, -1, argv);
-	}
-
-	err_close = close(file_from);
-	if (err_close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-		exit(100);
-	}
-
-	err_close = close(file_to);
-	if (err_close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-		exit(100);
-	}
-	return (0);
 }
 
 /**
- *detect_error - detect error print error message
- *@file_from: file we copping from
- *@file_to: file to bve copied to
- *@argv: arguments array
+ * main - enrty point
+ * @argc: arg bnumber
+ * @argv: argum array
+ * Return: 0 (success), 97-100 (exit value errors)
  */
-void detect_error(int file_from, int file_to, char *argv[])
+int main(int argc, char *argv[])
 {
-if (file_from == -1)
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+	int f_1, f_2, n_read, n_wrote;
+	char *buf[1024];
 
-if (file_to == -1)
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+	if (argc != 3)
+		__exit(97, NULL, 0);
+
+	/*open file to be copied toe*/
+	f_2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (f_2 == -1)
+		__exit(99, argv[2], 0);
+
+	/*open file to copy from*/
+	f_1 = open(argv[1], O_RDONLY);
+	if (f_1 == -1)
+		__exit(98, argv[1], 0);
+
+	/*read from file f_1 to the buffer*/
+	while ((n_read = read(f_1, buf, 1024)) != 0)
+	{
+		if (n_read == -1)
+			__exit(98, argv[1], 0);
+/*write from buffer to file f_2*/
+		n_wrote = write(f_2, buf, n_read);
+		if (n_wrote == -1)
+			__exit(99, argv[2], 0);
+	}
+
+	close(f_2) == -1 ? (__exit(100, NULL, f_2)) : close(f_2);
+	close(f_1) == -1 ? (__exit(100, NULL, f_1)) : close(f_1);
+	return (0);
 }
