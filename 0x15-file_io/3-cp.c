@@ -61,7 +61,6 @@ int main(int argc, char *argv[])
 		if (n_wrote == -1)
 			__exit(99, argv[2], 0);
 	}
-free(buf);
 	close(f_2) == -1 ? (__exit(100, NULL, f_2)) : close(f_2);
 	close(f_1) == -1 ? (__exit(100, NULL, f_1)) : close(f_1);
 	return (0);
